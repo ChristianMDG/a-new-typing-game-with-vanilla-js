@@ -1,40 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome To Rapid_Typing</title>
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"/>
-    <link rel="stylesheet" href="/src/assets/css/output.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/src/assets/css/output.css">
+  <link rel="stylesheet" href="/src/assets/css/style.css">
+  <title>KEYWARS</title>
 </head>
-<body class="bg-gray-100">
+<body class="min-h-screen flex flex-col items-center justify-center p-4">
+  <!-- Container -->
+  <div class="container w-full max-w-4xl ">
+    <!-- header section  -->
+    <header class="flex justify-between items-center mb-8 bg-amber-300">
+      <div class="text-4xl font-bold font-['Orbitron']">KeyWars</div>
+      <div class="flex items-center space-x-4 bg-amber-700">
 
-    <!-- Navbar -->
-    <nav class="bg-white shadow-md fixed top-0 left-0 w-full z-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex justify-between items-center h-16">
-          <!-- Logo -->
-          <div class="flex items-center space-x-2">
-            <span class="text-2xl font-bold text-indigo-600">⌨️ Rapid_Typing</span>
-          </div>
+        <!-- section difficulty  -->
+        <div class="flex space-x-2 mr-4">
+          <button id="easy-btn" class="effect difficulty-btn easy-active px-4 py-1 rounded-lg font-medium active">
+              Easy
+          </button>
+          <button id="medium-btn" class="effect difficulty-btn px-4 py-1 rounded-lg font-medium">
+              Medium
+          </button>
+          <button id="hard-btn" class="effect difficulty-btn px-4 py-1 rounded-lg font-medium">
+              Hard
+          </button>
+      </div>
 
-          <!-- Menu Desktop -->
-          <div class="hidden md:flex space-x-6 items-center">
-            <a href="#" class="text-gray-700 hover:text-indigo-600 font-medium">Home</a>
-            <a href="/public/practise.html" class="text-gray-700 hover:text-indigo-600 font-medium">Practise</a>
-            <a href="#statistiques" class="text-gray-700 hover:text-indigo-600 font-medium">Lesson</a>
-            <!-- <a href="#profil" class="text-gray-700 hover:text-indigo-600 font-medium">Profil</a> -->
-           <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-            <a href="/public/login.html">Login </a>
-              </button>
-              
-          </div>
-  <script src="/src/components/navbar.js"></script>
-  </body>
+<!-- switch ligth or darkmode -->
+      <div class="flex items-center mr-2">
+        <label class="switch">
+            <input type="checkbox" id="dark-mode-toggle">
+            <span class="slider"></span>
+        </label>
+    </div>
+
+      </div>
+    </header>
+  </div>
+</body>
 </html>
