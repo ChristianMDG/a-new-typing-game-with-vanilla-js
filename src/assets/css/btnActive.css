@@ -115,9 +115,6 @@ body.light-mode {
   background: #16a34a;
 }
 
-.light-mode .slider {
-  background-color: #cbd5e0;
-}
 
 .light-mode input:checked+.slider {
   background-color: #10b981;
