@@ -23,20 +23,17 @@ body {
 .effect {
     border-radius: 15px;
     background: linear-gradient(145deg, #171729, #1d1d31);
-    box-shadow:  8px 8px 16px #0d0d17,
-                -8px -8px 16px #272745;
+    box-shadow:  8px 8px 16px #0d0d17,-8px -8px 16px #272745;
     transition: all 0.3s ease;
 }
 
 .effect:hover {
-    box-shadow:  12px 12px 24px #0d0d17,
-                -12px -12px 24px #272745;
+    box-shadow:  12px 12px 24px #0d0d17,-12px -12px 24px #272745;
 }
 
 
 .effect-inset {
     border-radius: 15px;
     background: linear-gradient(145deg, #171729, #1d1d31);
-    box-shadow: inset 5px 5px 10px #0d0d17,
-                inset -5px -5px 10px #272745;
+    box-shadow: inset 5px 5px 10px #0d0d17, inset -5px -5px 10px #272745;
 }
