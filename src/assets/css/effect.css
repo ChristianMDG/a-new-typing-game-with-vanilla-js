@@ -1,0 +1,56 @@
+.effect {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #171729, #1d1d31);
+    box-shadow:  8px 8px 16px #0d0d17,
+                -8px -8px 16px #272745;
+    transition: all 0.3s ease;
+}
+
+.effect:hover {
+    box-shadow:  12px 12px 24px #0d0d17,
+                -12px -12px 24px #272745;
+}
+
+.effect-inset {
+    border-radius: 15px;
+    background: linear-gradient(145deg, #171729, #1d1d31);
+    box-shadow: inset 5px 5px 10px #0d0d17,
+                inset -5px -5px 10px #272745;
+}
+
+.color-border {
+    position: relative;
+}
+
+.color-border::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: 18px;
+    background: linear-gradient(45deg, 
+        var(--color-purple), 
+        var(--color-blue), 
+        var(--color-pink), 
+        var(--color-green));
+    z-index: -1;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.color-border:hover::after {
+    opacity: 0.7;
+}
+
+.color-text {
+    background: linear-gradient(to right, 
+        var(--color-purple), 
+        var(--color-blue), 
+        var(--color-pink), 
+        var(--color-green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}

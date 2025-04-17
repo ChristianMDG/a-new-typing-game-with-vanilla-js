@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/assets/css/output.css" />
-    <link rel="stylesheet" href="/src/assets/css/style.css" />
-    <link rel="stylesheet" href="/src/assets/css/header.css" />
+     <link rel="stylesheet" href="/src/assets/css/output.css" />
+    <link rel="stylesheet" href="/src/assets/css/main.css" />
+    <link rel="stylesheet" href="/src/assets/css/config.css" />
+    <link rel="stylesheet" href="/src/assets/css/effect.css" />
     <link rel="stylesheet" href="/src/assets/css/lightmode.css" />
-    <link rel="stylesheet" href="/src/assets/css/design.css" />
-    <link rel="stylesheet" href="/src/assets/css/lightmode.css" />
-    <link rel="stylesheet" href="/src/assets/css/btnActive.css">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/src/assets/css/btnActive.css"> 
+      <script src="https://cdn.tailwindcss.com"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -18,180 +17,150 @@
     <title>KEYWARS</title>
   </head>
   <body class="min-h-screen flex flex-col items-center justify-center p-4">
-    <!-- Container -->
-    <div class="container w-[60vw] h-[90vh] p-2 px-5 flex flex-col">
-      <!-- header section  -->
-      <header class="flex justify-between items-center p-1">
-        <div class="text-4xl font-bold font-['Orbitron']">
-          Key<span class="logo">Wars</span>
+    <div class="w-full max-w-4xl">
+      
+        <header class="flex justify-between items-center mb-8">
+            <div class="text-4xl font-bold font-['Orbitron'] neon-text tracking-wider">
+              Key<span class="logo">Wars</span> 
+            </div>
+            <div class="flex items-center space-x-4">
+                <!-- Difficulty Selector -->
+                <div class="flex space-x-2 mr-4">
+                    <button id="easy-btn" class="effect difficulty-btn easy-active px-4 py-1 rounded-lg font-medium active">
+                        Easy
+                    </button>
+                    <button id="medium-btn" class="effect difficulty-btn px-4 py-1 rounded-lg font-medium">
+                        Medium
+                    </button>
+                    <button id="hard-btn" class="effect difficulty-btn px-4 py-1 rounded-lg font-medium">
+                        Hard
+                    </button>
+                </div>
+                
+                <!-- Dark/Light mode toggle -->
+                <div class="flex items-center mr-2">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="dark-mode-toggle">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <!-- Navigation icons -->
+                <div class="flex space-x-2">
+                    <div class="nav-icon">
+                        <button class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
+                            <i class="fas fa-user"></i>
+                        </button>
+                        <span class="tooltip">Login</span>
+                    </div>
+                    <div class="nav-icon">
+                        <button class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
+                            <i class="fas fa-graduation-cap"></i>
+                        </button>
+                        <span class="tooltip">Tutorial</span>
+                    </div>
+                    <div class="nav-icon">
+                        <button class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
+                            <i class="fas fa-info-circle"></i>
+                        </button>
+                        <span class="tooltip">About</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Content -->
+        <main class="flex flex-col items-center">
+            <!-- Mode Selector -->
+            <div class="effect rounded-full p-1 mb-6 flex">
+                <button id="time-mode" class="px-6 py-2 rounded-full bg-purple-500 text-white font-medium">Time</button>
+                <button id="words-mode" class="px-6 py-2 rounded-full text-gray-400 font-medium">Words</button>
+                <button id="quote-mode" class="px-6 py-2 rounded-full text-gray-400 font-medium">Quote</button>
+            </div>
+            
+            <!-- Time Options -->
+            <div id="time-options" class="flex justify-center space-x-2 mb-6">
+                <button class="effect time-option px-4 py-1 rounded-lg font-medium" data-time="15">15s</button>
+                <button class="effect time-option px-4 py-1 rounded-lg font-medium active" data-time="30">30s</button>
+                <button class="effect time-option px-4 py-1 rounded-lg font-medium" data-time="60">60s</button>
+                <button class="effect time-option px-4 py-1 rounded-lg font-medium" data-time="120">120s</button>
+            </div>
+            
+            <!-- Timer & Stats -->
+            <div class="w-full flex justify-between items-center mb-6">
+                <div class="effect px-6 py-3 rounded-lg flex items-center">
+                    <i class="fas fa-clock text-purple-400 mr-2"></i>
+                    <span id="timer" class="font-['Orbitron'] text-2xl">30</span>
+                </div>
+                <div class="effect px-6 py-3 rounded-lg flex items-center">
+                    <i class="fas fa-tachometer-alt text-purple-400 mr-2"></i>
+                    <span id="wpm" class="font-['Orbitron'] text-2xl">0</span>
+                    <span class="ml-1">WPM</span>
+                </div>
+                <div class="effect px-6 py-3 rounded-lg flex items-center">
+                    <i class="fas fa-check-circle text-purple-400 mr-2"></i>
+                    <span id="accuracy" class="font-['Orbitron'] text-2xl">0</span>
+                    <span class="ml-1">%</span>
+                </div>
+            </div>
+            
+            <!-- Progress Bar -->
+            <div class="w-full h-2 effect-inset rounded-full mb-8 overflow-hidden">
+                <div id="progress-bar" class="h-full progress-gradient rounded-full" style="width: 0%"></div>
+            </div>
+            
+            <!-- Typing Area -->
+            <div id="typing-area" class="effect-inset w-full p-8 rounded-xl mb-8 min-h-48">
+                <div id="text-display" class="text-xl leading-relaxed tracking-wide font-medium"></div>
+            </div>
+            
+            <!-- Input Area -->
+            <div class="w-full relative">
+                <input id="input-field" type="text" class="w-full effect rounded-xl px-6 py-4 text-xl outline-none font-medium bg-transparent placeholder-purple-400/50" placeholder="Start typing to begin..." autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false">
+                <button id="restart-typing" class="absolute right-4 top-1/2 transform -translate-y-1/2 effect w-10 h-10 rounded-full flex items-center justify-center hover:text-green-400">
+                    <i class="fas fa-redo-alt text-purple-400"></i>
+                </button>
+            </div>
+        </main>
+        
+        <!-- Results Modal -->
+        <div id="results-modal" class="fixed inset-0 bg-black bg-opacity-70 flex items-center justify-center hidden z-50">
+            <div class="effect holographic p-8 rounded-xl w-full max-w-md">
+                <h2 class="text-3xl font-['Orbitron'] text-center mb-6 text-purple-400">Test Complete!</h2>
+                
+                <div class="grid grid-cols-2 gap-4 mb-8">
+                    <div class="effect-inset p-4 rounded-lg text-center">
+                        <div class="text-gray-400 mb-1">WPM</div>
+                        <div id="result-wpm" class="text-3xl font-['Orbitron'] text-green-400">0</div>
+                    </div>
+                    <div class="effect-inset p-4 rounded-lg text-center">
+                        <div class="text-gray-400 mb-1">Accuracy</div>
+                        <div id="result-accuracy" class="text-3xl font-['Orbitron'] text-green-400">0%</div>
+                    </div>
+                    <div class="effect-inset p-4 rounded-lg text-center">
+                        <div class="text-gray-400 mb-1">Correct</div>
+                        <div id="result-correct" class="text-3xl font-['Orbitron']">0</div>
+                    </div>
+                    <div class="effect-inset p-4 rounded-lg text-center">
+                        <div class="text-gray-400 mb-1">Wrong</div>
+                        <div id="result-wrong" class="text-3xl font-['Orbitron']">0</div>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center space-x-4">
+                    <button id="restart-btn" class="EFFECT px-6 py-3 rounded-lg text-purple-400 hover:text-green-400 transition-all">
+                        <i class="fas fa-redo mr-2"></i> Restart
+                    </button>
+                    <button id="share-btn" class="effect px-6 py-3 rounded-lg text-purple-400 hover:text-green-400 transition-all">
+                        <i class="fas fa-share-alt mr-2"></i> Share
+                    </button>
+                </div>
+            </div>
         </div>
-
-        <!-- section difficulty -->
-        <div class="flex items-center space-x-4">
-          <div class="flex space-x-2 mr-4">
-            <button
-              id="easy-btn"
-              class="effect difficulty-btn easy-active px-4 py-1 rounded-lg font-medium active"
-            >
-              Easy
-            </button>
-            <button
-              id="medium-btn"
-              class="effect difficulty-btn px-4 py-1 rounded-lg font-medium"
-            >
-              Medium
-            </button>
-            <button
-              id="hard-btn"
-              class="effect difficulty-btn px-4 py-1 rounded-lg font-medium"
-            >
-              Hard
-            </button>
-          </div>
-
-          <!-- Dark/Light mode -->
-          <div class="flex items-center mr-2">
-            <label class="toggle-switch">
-              <input type="checkbox" id="dark-mode-toggle" />
-              <span class="slider"></span>
-            </label>
-          </div>
-        </div>
-        <div class="flex space-x-2">
-          <div class="nav-icon">
-            <a href="/public/login.html">
-              <button
-                class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all"
-              >
-                <i class="fas fa-user"></i></button
-            ></a>
-            <span class="tooltip">Login</span>
-          </div>
-          <div class="nav-icon">
-            <button
-              class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all"
-            >
-              <i class="fas fa-graduation-cap"></i>
-            </button>
-            <span class="tooltip">Tutorial</span>
-          </div>
-          <div class="nav-icon">
-            <button
-              class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all"
-            >
-              <i class="fas fa-info-circle"></i>
-            </button>
-            <span class="tooltip">About</span>
-          </div>
-        </div>
-      </header>
-
-      <main class="flex flex-col items-center h-[95%] p-3">
-        <div class="effect rounded-full p-1 mb-6 flex">
-          <button
-            id="time-mode"
-            class="px-6 py-2 rounded-full bg-purple-500 text-white font-medium"
-          >
-            Time
-          </button>
-          <button
-            id="words-mode"
-            class="px-6 py-2 rounded-full text-gray-400 font-medium"
-          >
-            Words
-          </button>
-          <button
-            id="quote-mode"
-            class="px-6 py-2 rounded-full text-gray-400 font-medium"
-          >
-            Quote
-          </button>
-        </div>
-
-        <div id="time-options" class="flex justify-center space-x-2 mb-6">
-          <button
-            class="effect time-option px-4 py-1 rounded-lg font-medium"
-            data-time="15"
-          >
-            15s
-          </button>
-          <button
-            class="effect time-option px-4 py-1 rounded-lg font-medium active"
-            data-time="30"
-          >
-            30s
-          </button>
-          <button
-            class="effect time-option px-4 py-1 rounded-lg font-medium"
-            data-time="60"
-          >
-            60s
-          </button>
-          <button
-            class="effect time-option px-4 py-1 rounded-lg font-medium"
-            data-time="120"
-          >
-            120s
-          </button>
-        </div>
-
-        <div class="w-full flex justify-between items-center mb-6">
-          <div class="effect px-6 py-3 rounded-lg flex items-center">
-            <i class="fas fa-clock text-purple-400 mr-2"></i>
-            <span id="timer" class="font-['Orbitron'] text-2xl">30</span>
-          </div>
-          <div class="effect px-6 py-3 rounded-lg flex items-center">
-            <i class="fas fa-tachometer-alt text-purple-400 mr-2"></i>
-            <span id="wpm" class="font-['Orbitron'] text-2xl">0</span>
-            <span class="ml-1">WPM</span>
-          </div>
-          <div class="effect px-6 py-3 rounded-lg flex items-center">
-            <i class="fas fa-check-circle text-purple-400 mr-2"></i>
-            <span id="accuracy" class="font-['Orbitron'] text-2xl">0</span>
-            <span class="ml-1">%</span>
-          </div>
-        </div>
-        <div class="w-full h-2 effect-inset rounded-full mb-8 overflow-hidden">
-          <div
-            id="progress-bar"
-            class="h-full progress-gradient rounded-full"
-            style="width: 0%"
-          ></div>
-        </div>
-
-        <div
-          id="typing-area"
-          class="effect-inset w-full p-8 rounded-xl mb-8 min-h-48"
-        >
-          <div
-            id="text-display"
-            class="text-xl leading-relaxed tracking-wide font-medium"
-          ></div>
-        </div>
-
-        <div class="w-full relative">
-          <input
-            id="input-field"
-            type="text"
-            class="w-full effect rounded-xl px-6 py-4 text-xl outline-none font-medium bg-transparent placeholder-purple-400/50"
-            placeholder="Start typing to begin..."
-            autocomplete="off"
-            autocorrect="off"
-            autocapitalize="off"
-            spellcheck="false"
-          />
-          <button
-            id="restart-typing"
-            class="absolute right-4 top-1/2 transform -translate-y-1/2 effect w-10 h-10 rounded-full flex items-center justify-center hover:text-green-400"
-          >
-            <i class="fas fa-redo-alt text-purple-400"></i>
-          </button>
-        </div>
-      </main>
     </div>
-
-    <script src="/src/components/darkLigthMode.js"></script>
-    <script src="/src/components/selectDifficult.js"></script>
-    <script src="/src/components/timer.js"></script>
+    <!-- <script src="/src/components/darkLigthMode.js"></script> -->
+    <!-- <script src="/src/components/selectDifficult.js"></script> -->
+    <!-- <script src="/src/components/timer.js"></script> -->
+    <script src="/src/components/script.js"></script>
   </body>
 </html>
