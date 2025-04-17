@@ -1,0 +1,31 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+        
+:root {
+    --color-purple: #2D1719;
+    --color-green: #4ade80;
+    --color-pink: #ec4899;
+    --color-blue: #3b82f6;
+    --dark-bg: #0f0f1b;
+    --darker-bg: #0a0a12;
+    --light-bg: #f0f0f5;
+    --lighter-bg: #ffffff;
+}
+
+body {
+    font-family: 'Rajdhani', sans-serif;
+    background-image: linear-gradient(to right,var(--color-purple), #1E005E);
+}
+
+.img{
+    background-image: url(/src/assets/image/freepik__futuristic-gaming-keyboard-floating-in-a-virtual-r__95068-removebg-preview\ 1.png);
+    background-size: cover;
+    background-position:center;
+}
+
+.btn-color{
+    background-image: linear-gradient(to right,#2400FF,#00C2FF);
+}
+.text-color{
+    color: var(--lighter-bg);
+}
