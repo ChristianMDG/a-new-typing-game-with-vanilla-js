@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/src/assets/css/style.css">
+    <title>Document</title>
+</head>
+<body class="min-h-screen">
+    <div class="container mx-auto px-4 py-12 max-w-4xl">
+    <div id="login">
+        <main class="effect p-8 rounded-xl max-w-md mx-auto">
+            <h1 class="text-3xl font-['Orbitron'] mb-2 text-center">
+                <i class="fas fa-user-astronaut mr-2"></i>Login
+            </h1>
+            <p class="text-center mb-8">Access your KeyWars account</p>
+            
+            <form id="loginForm" class="space-y-6">
+                <div>
+                    <label for="email" class="block mb-2 text-sm font-medium">Email</label>
+                    <input type="email" id="email" class="input-color w-full p-3 rounded-lg focus:outline-none" placeholder="your@email.com" required>
+                </div>
+                
+                <div>
+                    <label for="password" class="block mb-2 text-sm font-medium">Password</label>
+                    <input type="password" id="password" class="input-color w-full p-3 rounded-lg focus:outline-none" placeholder="••••••••" required>
+                </div>
+                
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center">
+                        <input id="remember" type="checkbox" class="w-4 h-4 rounded bg-gray-700 border-gray-600">
+                        <label for="remember" class="ml-2 text-sm font-medium">Remember me</label>
+                    </div>
+                    <a href="#" class="text-sm text-blue-400 hover:underline">Forgot password?</a>
+                </div>
+                
+                <button type="submit" class="btn-color w-full text-white font-bold py-3 px-4 rounded-lg text-lg uppercase tracking-wider pulse">
+                    Login <i class="fas fa-sign-in-alt ml-2"></i>
+                </button>
+            </form>
+        </main>
+    </div>
+    </div>
+    <script src="/src/components/login.js"></script> 
+</body>
+</html>

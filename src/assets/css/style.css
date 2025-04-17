@@ -1,0 +1,94 @@
+:root {
+    --dark-bg: #0f0f1a;
+    --light-bg: #e0e0e0;
+    --color-blue: #00f3ff;
+    --color-purple: #b400ff;
+    --color-pink: #ff00c8;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--light-bg);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.color-text {
+    text-shadow: 0 0 5px var(--color-blue), 0 0 10px var(--color-blue), 0 0 15px var(--color-blue);
+    color: var(--color-blue);
+    animation: flicker 1.5s infinite alternate;
+}
+
+.color-purple {
+    text-shadow: 0 0 5px var(--color-purple), 0 0 10px var(--color-purple);
+    color: var(--color-purple);
+}
+
+.color-pink {
+    text-shadow: 0 0 5px var(--color-pink), 0 0 10px var(--color-pink);
+    color: var(--color-pink);
+}
+
+.effect {
+    background: var(--dark-bg);
+    box-shadow: 5px 5px 10px #0a0a12, -5px -5px 10px #141422;
+    transition: all 0.3s ease;
+}
+
+.effect:hover {
+    box-shadow: 8px 8px 15px #0a0a12, -8px -8px 15px #141422;
+}
+
+.effect-inset {
+    background: var(--dark-bg);
+    box-shadow: inset 5px 5px 10px #0a0a12, inset -5px -5px 10px #141422;
+}
+
+.btn-color {
+    background: linear-gradient(45deg, var(--color-purple), var(--color-blue));
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.btn-color:hover {
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.8);
+    transform: translateY(-2px);
+}
+
+.input-color {
+    background: rgba(15, 15, 26, 0.8);
+    border: 1px solid var(--color-blue);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.input-color:focus {
+    box-shadow: 0 0 15px rgba(0, 243, 255, 0.5);
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow: 0 0 5px var(--color-blue), 0 0 10px var(--color-blue), 0 0 15px var(--color-blue);
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 243, 255, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 243, 255, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 243, 255, 0);
+    }
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
