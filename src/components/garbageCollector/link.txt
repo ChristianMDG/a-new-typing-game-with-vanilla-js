@@ -1,0 +1,3 @@
+<!-- link script file -->
+<script type="module" src="/src/components/main.js"></script>
+<script src="/src/components/darkLigthMode.js"></script>
