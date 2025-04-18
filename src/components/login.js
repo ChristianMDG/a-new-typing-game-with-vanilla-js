@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
             resultat.innerHTML = '<div class="loader"></div>';
             setTimeout(() => {
                 window.location.href = '/public/play.html';
-            }, 2000);
+            }, 3000);
         } 
     }
 

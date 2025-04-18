@@ -1,4 +1,4 @@
-
+/* 
 .loader {
     width: 50px;
     --b: 8px;
@@ -12,9 +12,19 @@
             mask-composite: intersect;
     animation: l5 1s infinite;
   }
-  @keyframes l5 {to{transform: rotate(.5turn)}}
+  @keyframes l5 {to{transform: rotate(.5turn)}} */
 
-
+/* HTML: <div class="loader"></div> */
+/* HTML: <div class="loader"></div> */
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 8px solid;
+  border-color: #000 #0000;
+  animation: l1 1s infinite;
+}
+@keyframes l1 {to{transform: rotate(.5turn)}}
   /* HTML: <div class="loader-page"></div> */
 .loader-page {
   width: 200px;

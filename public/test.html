@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Dactylographie JS</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+    h1 {
+      color: #333;
+    }
+    #phrase {
+      font-size: 1.3rem;
+      margin: 20px 0;
+      background-color: #eee;
+      padding: 10px 15px;
+      border-radius: 5px;
+    }
+    #input {
+      padding: 10px;
+      width: 100%;
+      max-width: 500px;
+      font-size: 1.1rem;
+    }
+    #result {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Appli de Dactylographie</h1>
+  <div id="phrase">Chargement...</div>
+  <input type="text" id="input" placeholder="Tape ici..." autocomplete="off" />
+  <div id="result"></div>
+
+  <script>
+    const phrases = [
+      "Bonjour et bienvenue dans cet exercice.",
+      "La dactylographie est très utile.",
+      "Apprendre à taper vite prend du temps.",
+      "JavaScript rend tout cela possible.",
+      "Ce test va mesurer ta rapidité !"
+    ];
+
+    const phraseEl = document.getElementById("phrase");
+    const inputEl = document.getElementById("input");
+    const resultEl = document.getElementById("result");
+
+    let startTime;
+    let currentPhrase;
+
+    function newPhrase() {
+      currentPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+      phraseEl.textContent = currentPhrase;
+      inputEl.value = "";
+      resultEl.textContent = "";
+      startTime = null;
+    }
+
+    inputEl.addEventListener("input", () => {
+      if (!startTime) {
+        startTime = new Date(); // Démarrer le chrono
+      }
+
+      const typed = inputEl.value;
+      if (typed === currentPhrase) {
+        const timeTaken = ((new Date() - startTime) / 1000).toFixed(2);
+        resultEl.textContent = `✅ Bravo ! Temps : ${timeTaken} secondes.`;
+        setTimeout(newPhrase, 3000);
+      } else if (currentPhrase.startsWith(typed)) {
+        inputEl.style.backgroundColor = "#e6ffe6"; // vert clair si correct
+      } else {
+        inputEl.style.backgroundColor = "#ffe6e6"; // rouge clair si erreur
+      }
+    });
+
+    // Lancer une première phrase
+    newPhrase();
+  </script>
+</body>
+</html>
