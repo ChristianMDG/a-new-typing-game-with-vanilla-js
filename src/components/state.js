@@ -12,6 +12,8 @@ export const state = {
     currentParagraph: '',
     currentDifficulty: 'easy',
     currentMode: 'time',
+    typedWords: [], 
+
 };
 
 

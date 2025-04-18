@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('loginForm');
     const resultat = document.getElementById('submit');
-    const error = document.getElementById('message');
 
     function handleLogin(e) {
         e.preventDefault();
@@ -9,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         if (email && password) {
-            resultat.innerHTML = '  <img src="/src/assets/style/preloader.gif" alt="loading">';
+            resultat.innerHTML = '<div class="loader"></div>';
             setTimeout(() => {
                 window.location.href = '/public/play.html';
-            }, 1000);
+            }, 2000);
         } 
     }
 
