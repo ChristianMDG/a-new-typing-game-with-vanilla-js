@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+   <link rel="stylesheet" href="/src/assets/css/design.css">
+   <link rel="stylesheet" href="/src/assets/css/main.css">
+   <link rel="icon" href="/src/assets/favicon_io/android-chrome-192x192.png" sizes="192x192" type="image/png">
+
+    <title>Welcome To KeyWars</title>
+</head>
+<body class="min-h-screen flex flex-col ">
+
+    <div class="absolute w-full h-full"></div>
+    
+    <div class="container mx-auto px-4 py-12 flex-1 flex flex-col items-center justify-center relative z-10">
+      
+        <header class="text-center mb-12 transit-animation">
+            <h1 class="text-5xl md:text-7xl font-bold mb-4">Key<span class="logo">Wars</span></h1>
+            <p class="text-xl md:text-2xl text-gray-300">Embark on Epic EndLess Typing Battle</p>
+        </header>
+        
+        <main class="flex flex-col lg:flex-row items-center justify-between w-full max-w-6xl">
+           
+            <div class="w-full lg:w-1/2 mb-12 lg:mb-0 lg:pr-12 transit-animation" style="animation-delay: 0.3s;">
+                <div class="effect p-8 rounded-2xl">
+                    <h2 class="text-3xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-green-200 to-green-500">
+                        <i class="fas far fa-keyboard mr-3"></i> Push your limits
+                    </h2>
+                    <p class="text-gray-300 mb-6 text-lg leading-relaxed">
+                        Dive into an immersive typing experience with our interactive keyboard.
+                        Improve your speed and accuracy while immersing yourself in a cyberpunk atmosphere.
+                    </p>
+                    <div class="flex flex-wrap gap-4 mt-8">
+                        <a href="#"  onclick="window.location.href='/public/loading.html'" class="btn-color px-8 py-4 rounded-full text-green-400 font-bold text-lg uppercase tracking-wider transition-all duration-300 hover:from-green-300 hover:to-green-500 hover:shadow-lg hover:shadow-cyan-500/50 border-style-btn">
+                            Get Started <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        
+                       <a href="/public/login.html" class="px-[4vw] py-4 rounded-full border-2 border-green-300 text-green-500 font-semibold text-lg">
+                           Login <i class="fas fa-sign-in-alt ml-5"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="effect p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-cyan-400">10K+</div>
+                        <div class="text-gray-400">Players</div>
+                    </div>
+                    <div class="effect p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-purple-400">∞</div>
+                        <div class="text-gray-400">Levels</div>
+                    </div>
+                    <div class="effect p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-pink-400">+50</div>
+                        <div class="text-gray-400">Words</div>
+                    </div>
+                    <div class="effect p-4 rounded-xl text-center">
+                        <div class="text-3xl font-bold text-yellow-400">😜</div>
+                        <div class="text-gray-400">Fun</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="w-full lg:w-1/2 keyboard transit-animation" style="animation-delay: 0.6s;">
+                <div class="effect p-6 rounded-2xlv  overflow-hidden">
+                    <img src="/src/assets/image/key.png" alt="Futuristic keyboard" class="w-full h-[50vh] transform rotate-x-5 transition-all duration-500 hover:scale-105">
+                    <div class="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="absolute -z-10">
+                    <div class="w-64 h-64 rounded-full bg-cyan-500/20 blur-3xl absolute -top-20 -left-20"></div>
+                    <div class="w-64 h-64 rounded-full bg-purple-500/20 blur-3xl absolute -bottom-20 -right-20"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <footer class="py-6 text-center text-gray-400 text-sm relative z-10">
+        <div class="container mx-auto px-4">
+            <p> <i class="fas fas fa-gamepad"></i> 2025 KeyWars. All rights reserved<i class="fas fas fa-gamepad"></i></p>
+            <div class="flex justify-center space-x-4 mt-2">
+                <a href="#" class="hover:text-cyan-400 transition"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="hover:text-purple-400 transition"><i class="fab fa-discord"></i></a>
+                <a href="#" class="hover:text-pink-400 transition"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="hover:text-blue-400 transition"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </footer>
+    <div id="loading" class="spinner" style="display:none;"></div>
+    <script src="/src/components/loading.js"></script>
+</body>
+</html>
+

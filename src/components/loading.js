@@ -10,7 +10,7 @@ const loadingRedirects = {
     if (nextPage) {
       setTimeout(() => {
         window.location.href = nextPage;
-      }, 3000); 
+      }, 2500); 
     }
   });
   
