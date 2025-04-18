@@ -19,9 +19,10 @@
   <body class="min-h-screen flex flex-col items-center justify-center p-4">
     <div class="w-full max-w-4xl ">
         <header class="flex justify-between items-center mb-8">
-            <div class="text-4xl font-bold font-['Orbitron'] neon-text tracking-wider">
+            <div class="text-4xl font-bold font-['Orbitron']">
               Key<span class="logo">Wars</span> 
             </div>
+          
             <div class="flex items-center space-x-4">
                 
                 <div class="flex space-x-2 mr-4">
@@ -53,26 +54,28 @@
                         </button></a> 
                         <span class="tooltip">Home</span>
                     </div>
-                    <div class="nav-icon">
-                     <a href="/public/index.html">   <button class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
-                            <i class="fas fa-user"></i>
-                        </button></a>
-                        <span class="tooltip">Logout</span>
-                    </div>
+                   
                    
                     <div class="nav-icon">
-                       <a href="/public/index.html"> <button class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
+                        <a href="/public/play.html" class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
                             <i class="fas fas fa-gamepad"></i>
-                        </button></a>
+                        </a>
                         <span class="tooltip">Play</span>
                     </div>
 
                     <div class="nav-icon">
-                        <a href="/public/about.html"> <button class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
+                         <a href="/public/about.html" class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
                              <i class="fas fa-info-circle"></i>
-                         </button></a>
+                         </a>
                          <span class="tooltip">About</span>
                      </div>
+                     
+                     <div class="nav-icon">
+                        <a href="/public/index.html" class="effect w-10 h-10 rounded-full flex items-center justify-center text-purple-400 hover:text-green-400 transition-all">
+                               <i class="fas fa-user"></i>
+                           </a>
+                           <span class="tooltip">Logout</span>
+                       </div>
 
                      <!-- <div class="flex flex-col items-center justify-center ">
                         <div class="effect w-12 h-12 rounded-full flex items-center justify-center bg-cover bg-center" style="background-image: url('/src/assets/image/hom.png');"></div>
@@ -166,9 +169,9 @@
                     <button id="restart-btn" class="EFFECT px-6 py-3 rounded-lg text-purple-400 hover:text-green-400 transition-all">
                         <i class="fas fa-redo mr-2"></i> Restart
                     </button>
-                    <button id="share-btn" class="effect px-6 py-3 rounded-lg text-purple-400 hover:text-green-400 transition-all">
-                        <i class="fas fa-share-alt mr-2"></i> Share
-                    </button>
+                    <a href="/public/index.html" class="effect px-6 py-3 rounded-lg text-purple-400 hover:text-green-400 transition-all">
+                        <i class="fas fas fa-outdent mr-2"></i> Logout
+                    </a>
                 </div>
             </div>
         </div>

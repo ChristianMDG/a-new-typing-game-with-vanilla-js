@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = document.getElementById('password').value;
 
         if (email && password) {
-            resultat.innerHTML = '<p>Wait...</p>';
+            resultat.innerHTML = '  <img src="/src/assets/style/preloader.gif" alt="loading">';
             setTimeout(() => {
                 window.location.href = '/public/play.html';
             }, 1000);
