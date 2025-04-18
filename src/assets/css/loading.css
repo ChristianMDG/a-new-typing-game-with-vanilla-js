@@ -1,4 +1,4 @@
-/* HTML: <div class="loader"></div> */
+
 .loader {
     width: 50px;
     --b: 8px;
@@ -13,3 +13,26 @@
     animation: l5 1s infinite;
   }
   @keyframes l5 {to{transform: rotate(.5turn)}}
+
+
+  /* HTML: <div class="loader-page"></div> */
+.loader-page {
+  width: 200px;
+  height: 22px;
+  border-radius: 20px;
+  color: #ffffff;
+  border: 2px solid;
+  position: relative;
+}
+.loader-page::before {
+  content: "";
+  position: absolute;
+  margin: 2px;
+  inset: 0 100% 0 0;
+  border-radius: inherit;
+  background: currentColor;
+  animation: l6 2s infinite;
+}
+@keyframes l6 {
+    100% {inset:0}
+}

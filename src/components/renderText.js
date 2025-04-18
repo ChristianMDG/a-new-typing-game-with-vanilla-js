@@ -16,7 +16,7 @@ export const renderText = () => {
             if (wordIndex < state.currentWordIndex) {
                 charSpan.className = 'correct';
             } else if (wordIndex === state.currentWordIndex && i < state.currentCharIndex) {
-                charSpan.className = 'correct';
+                charSpan.className = 'incorrect';
             } else if (wordIndex === state.currentWordIndex && i === state.currentCharIndex) {
                 charSpan.className = 'current';
             }
