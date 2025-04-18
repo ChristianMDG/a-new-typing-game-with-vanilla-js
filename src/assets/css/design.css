@@ -1,21 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@300;500;700&display=swap');
-        
-:root {
-    --color-blue: #0ff0fc;
-    --color-pink: #ff00ff;
-    --color-purple: #8a2be2;
-    --dark-bg: #1a1a2e;
-}
 
-body {
-    font-family: 'Rajdhani', sans-serif;
-    background-color: var(--dark-bg);
-    color: white;
-    overflow-x: hidden;
-}
-.logo{
-    color: ;
-}
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
 }
@@ -93,7 +76,7 @@ h1, h2, h3 {
 
 @keyframes boum {
     0% {
-        box-shadow: 0 0 0 0 rgba(0, 255, 255, 0.7);
+        box-shadow: 0 0 0 0 #4ade80;
     }
     70% {
         box-shadow: 0 0 0 15px rgba(0, 255, 255, 0);

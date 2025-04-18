@@ -1,14 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700&family=Rajdhani:wght@300;400;500;600;700&display=swap');
-        
+     
 :root {
-    --color-purple: #a855f7;
     --color-green: #4ade80;
     --color-pink: #ec4899;
     --color-blue: #3b82f6;
-    --dark-bg: #1a1a2e;
     --darker-bg: #0a0a12;
     --light-bg: #f0f0f5;
     --lighter-bg: #ffffff;
+    --color-blue: #0ff0fc;
+    --color-purple: #8a2be2;
+    --dark-bg: #1a1a2e;
 }
 
 body {
