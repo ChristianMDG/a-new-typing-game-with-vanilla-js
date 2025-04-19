@@ -2,7 +2,6 @@
 h1, h2, h3 {
     font-family: 'Orbitron', sans-serif;
 }
-
 .effect {
     border-radius: 20px;
     background: linear-gradient(145deg, #1e1e3a, #232347);
@@ -10,31 +9,26 @@ h1, h2, h3 {
                 -10px -10px 20px #25254e;
     transition: all 0.3s ease;
 }
-
 .effect:hover {
     box-shadow:  15px 15px 30px #151528,
                 -15px -15px 30px #25254e;
 }
-
 .color-text {
     text-shadow: 0 0 5px var(--color-blue),
                  0 0 10px var(--color-blue),
                  0 0 20px var(--color-blue);
     color: white;
 }
-
 .color-border {
     border: 2px solid var(--color-blue);
     box-shadow: 0 0 10px var(--color-blue),
                 inset 0 0 10px var(--color-blue);
 }
-
 .btn-color {
     position: relative;
     overflow: hidden;
     z-index: 1;
 }
-
 .btn-color::before {
     content: '';
     position: absolute;
@@ -46,11 +40,9 @@ h1, h2, h3 {
     transition: 0.5s;
     z-index: -1;
 }
-
 .btn-color:hover::before {
     left: 100%;
 }
-
 .keyboard {
     position: relative;
     perspective: 1000px;
