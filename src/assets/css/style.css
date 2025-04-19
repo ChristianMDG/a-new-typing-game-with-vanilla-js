@@ -32,7 +32,7 @@
 }
 
 .btn-color {
-    background: linear-gradient(45deg, var(--color-purple), var(--color-blue));
+    background: linear-gradient(45deg,var(--color-green), var(--color-blue));
     box-shadow: 0 0 10px rgba(0, 243, 255, 0.5);
     transition: all 0.3s ease;
 }

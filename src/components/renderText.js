@@ -17,14 +17,13 @@ export const renderText = () => {
                 charSpan.className = 'correct';
             } else if (wordIndex === state.currentWordIndex && i < state.currentCharIndex) {
                 charSpan.className = 'correct';
-            } else if (wordIndex === state.currentWordIndex && i === state.currentCharIndex) {
+            }
+             else if (wordIndex === state.currentWordIndex && i === state.currentCharIndex) {
                 charSpan.className = 'current';
             }
-
             charSpan.textContent = word[i];
             wordSpan.appendChild(charSpan);
         }
-
         const spaceSpan = document.createElement('span');
         spaceSpan.textContent = ' ';
         wordSpan.appendChild(spaceSpan);
