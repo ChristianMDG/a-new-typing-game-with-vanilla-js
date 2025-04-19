@@ -5,26 +5,25 @@ import { inputField, timerElement, wpmElement, accuracyElement, progressBar, res
 export const resetTest = () => {
     clearInterval(state.timerInterval);
     state.isTestRunning = false;
-
     const activeTimeOption = document.querySelector('.time-option.active');
     state.timer = activeTimeOption ? parseInt(activeTimeOption.dataset.time) : 30;
+
 
     state.totalTyped = 0;
     state.correctTyped = 0;
     state.currentWordIndex = 0;
     state.currentCharIndex = 0;
-
+    state.initErrorTracking();
     timerElement.textContent = state.timer;
     wpmElement.textContent = '0';
     accuracyElement.textContent = '0';
     progressBar.style.width = '0%';
-
     inputField.value = '';
     inputField.disabled = false;
-
     resultsModal.classList.add('hidden');
+
     loadNewText();
-}
+};
 
 export const endTest = () => {
     clearInterval(state.timerInterval);
@@ -39,6 +38,5 @@ export const endTest = () => {
     resultAccuracy.textContent = accuracy + '%';
     resultCorrect.textContent = state.correctTyped;
     resultWrong.textContent = state.totalTyped - state.correctTyped;
-
     resultsModal.classList.remove('hidden');
-}
+};

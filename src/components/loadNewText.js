@@ -10,7 +10,6 @@ export const loadNewText = () => {
         const randomIndex = Math.floor(Math.random() * texts.length);
         state.currentParagraph = texts[randomIndex];
     }
-
     state.words = state.currentParagraph.split(' ');
     renderText();
 }

@@ -12,8 +12,13 @@ export const state = {
     currentParagraph: '',
     currentDifficulty: 'easy',
     currentMode: 'time',
-    typedWords: [], 
+    typedWords: [],
+    correctChars: [],      
+    isSpaceCorrect: null,  
+    
 
+    initErrorTracking: function() {
+        this.correctChars = this.words.map(word => new Array(word.length).fill(null));
+        this.isSpaceCorrect = null;
+    }
 };
-
-

@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000);
         } 
     }
-
     loginForm.addEventListener('submit', handleLogin);
 
     loginForm.addEventListener('keydown', (event) => {
